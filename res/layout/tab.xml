@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:background="@drawable/tabbg">
+	<View android:layout_width="fill_parent" android:layout_height="0.66dp"
+		android:background="#454548" android:id="@+id/line1"></View>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center">
+					
+		<TextView android:layout_width="fill_parent" android:id="@+id/label"
+			android:layout_height="55.0dp" android:text="食事日記"
+			android:textColor="#838486" android:textSize="13sp"
+			android:gravity="center"
+			android:shadowDy="0.66" android:shadowColor="#19191A"
+			android:shadowRadius="1"
+			android:layout_weight="1" />
+		
+	</LinearLayout>
+	<View android:layout_width="fill_parent" android:layout_height="0.66dp"
+		android:background="#3B3B3D" android:id="@+id/line2"></View>
+	<View android:layout_width="fill_parent" android:layout_height="0.66dp"
+		android:background="#000000" android:id="@+id/line3"></View>
+</LinearLayout>
