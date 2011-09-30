@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/action_bar" android:layout_width="fill_parent"
+	android:layout_height="45dp" android:layout_gravity="center_vertical"
+	android:orientation="vertical">
+	
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_gravity="center"
+		 android:orientation="horizontal"
+		android:gravity="center" android:background="@drawable/barback">
+		
+		
+ 			<Button 
+			android:layout_width="wrap_content"  
+ 			android:layout_height="wrap_content"
+ 			android:layout_centerVertical="true"
+ 			android:layout_alignParentRight="true"
+ 			android:layout_marginRight="10dp"
+ 			android:text="保存"
+  			android:textSize="13dp"
+  			android:paddingLeft="8dp"
+  			android:paddingRight="8dp"
+  			android:paddingTop="6dp"
+  			android:paddingBottom="6dp"
+  			android:background="@drawable/button"
+  			android:visibility="gone"
+ 			/>
+ 			
+
+		 <RadioGroup
+			android:id="@+id/threeradio"  
+ 			android:layout_width="300dp"  
+ 			android:layout_height="30dp"
+ 			android:layout_centerHorizontal="true"
+ 			android:layout_alignParentTop="true"
+ 			android:orientation="horizontal"
+ 			android:visibility="gone"
+ 			>  
+ 			<RadioButton android:id="@+id/rb_left"
+ 			android:gravity="center"  
+  			android:text="全期間"
+  			android:textSize="13dp"  
+  			android:layout_width="wrap_content"  
+  			android:layout_height="fill_parent"  
+  			android:checked="true"  
+  			android:layout_weight="1"  
+  			android:button="@null"  
+  			android:background="@drawable/radioleft" />  
+ 			<RadioButton android:id="@+id/rb_center"
+ 			android:gravity="center"  
+  			android:text="週間"  
+  			android:textSize="13dp"
+  			android:layout_width="wrap_content"  
+  			android:layout_height="fill_parent"  
+  			android:layout_weight="1"  
+  			android:button="@null"  
+  			android:background="@drawable/radiocenter" />  
+ 			<RadioButton android:id="@+id/rb_right"
+ 			android:gravity="center"  
+  			android:text="月間"  
+  			android:textSize="13dp"
+  			android:layout_width="wrap_content"  
+  			android:layout_height="fill_parent"  
+  			android:layout_weight="1"  
+  			android:button="@null"  
+  			android:background="@drawable/radioright" />  
+		</RadioGroup>
+		
+	</RelativeLayout>
+	
+	 
+</RelativeLayout>

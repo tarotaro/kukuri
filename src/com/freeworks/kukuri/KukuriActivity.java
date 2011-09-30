@@ -1,6 +1,7 @@
 package com.freeworks.kukuri;
 
 
+import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,6 +9,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.TabHost.OnTabChangeListener;
@@ -35,7 +37,7 @@ public class KukuriActivity extends TabActivity {
         TextView label1 = (TextView) tabView1.findViewById(R.id.label);
         label1.setText("êHéñì˙ãL");
         
-        intent = new Intent().setClass(this, WeightActivity.class);
+        intent = new Intent().setClass(this, MealDiaryActivity.class);
         spec = tabs.newTabSpec(DIARY_TAB).setIndicator(tabView1).setContent(intent);
         tabs.addTab(spec);
 
@@ -49,7 +51,7 @@ public class KukuriActivity extends TabActivity {
         View tabView3 = inflater.inflate(R.layout.tab, null);        
         TextView label3 = (TextView) tabView3.findViewById(R.id.label);
         label3.setText("â^ìÆ");
-        intent = new Intent().setClass(this, WeightActivity.class);
+        intent = new Intent().setClass(this, MealDiaryActivity.class);
         spec = tabs.newTabSpec(EXEC_TAB).setIndicator(tabView3).setContent(intent);
         tabs.addTab(spec);
         
@@ -57,7 +59,7 @@ public class KukuriActivity extends TabActivity {
         View tabView4 = inflater.inflate(R.layout.tab, null);        
         TextView label4 = (TextView) tabView4.findViewById(R.id.label);
         label4.setText("ëSëÃèÓïÒ");
-        intent = new Intent().setClass(this, WeightActivity.class);
+        intent = new Intent().setClass(this, MealDiaryActivity.class);
         spec = tabs.newTabSpec(ALLINFO_TAB).setIndicator(tabView4).setContent(intent);
         tabs.addTab(spec);
         
@@ -65,7 +67,7 @@ public class KukuriActivity extends TabActivity {
         
         TextView label5 = (TextView) tabView5.findViewById(R.id.label);
         label5.setText("ê›íË");
-        intent = new Intent().setClass(this, WeightActivity.class);
+        intent = new Intent().setClass(this, MealDiaryActivity.class);
         spec = tabs.newTabSpec(SETTING_TAB).setIndicator(tabView5).setContent(intent);
         tabs.addTab(spec);
         
@@ -105,13 +107,22 @@ public class KukuriActivity extends TabActivity {
     
     public void changeTabViewStyle(int activeTabId) {
         int tabId = 0;
+        if(activeTabId==1){
+        	RadioGroup rg = (RadioGroup)findViewById(R.id.threeradio);
+    		rg.setVisibility(View.VISIBLE);
+    	}else{
+    		RadioGroup rg = (RadioGroup)findViewById(R.id.threeradio);
+    		rg.setVisibility(View.GONE);
+        }
         while(tabId < 5){
             View v = getTabWidget().getChildTabViewAt(tabId);
             if(tabId == activeTabId) {
+            	
                 setActiveTabView(v);
             }
             else {
                 setInactiveTabView(v);
+                
             }
             tabId++;
         }

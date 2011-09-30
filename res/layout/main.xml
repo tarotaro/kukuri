@@ -12,7 +12,7 @@
         android:layout_height="fill_parent"
         android:background="#FFFFFF"  
         >  
-        <include layout="@layout/actionbar_nobtn" android:id="@+id/actionbar_nobtn" />
+        <include layout="@layout/actionbar_layout" android:id="@+id/actionbar_layout" />
         
         <FrameLayout  
             android:id="@android:id/tabcontent"  

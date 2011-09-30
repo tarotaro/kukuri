@@ -17,6 +17,9 @@
         
         <activity android:name="com.freeworks.kukuri.WeightActivity"
 			android:screenOrientation="portrait" android:launchMode="standard" />
+			
+		<activity android:name="com.freeworks.kukuri.MealDiaryActivity"
+			android:screenOrientation="portrait" android:launchMode="standard" />
 
     </application>
 </manifest>

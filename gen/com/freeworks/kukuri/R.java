@@ -12,22 +12,41 @@ public final class R {
     }
     public static final class drawable {
         public static final int barback=0x7f020000;
-        public static final int icon=0x7f020001;
-        public static final int tabbg=0x7f020002;
+        public static final int button=0x7f020001;
+        public static final int buttonrect=0x7f020002;
+        public static final int buttonrectpress=0x7f020003;
+        public static final int icon=0x7f020004;
+        public static final int radiobuttoncenter=0x7f020005;
+        public static final int radiobuttoncenterselect=0x7f020006;
+        public static final int radiobuttonleft=0x7f020007;
+        public static final int radiobuttonleftselect=0x7f020008;
+        public static final int radiobuttonright=0x7f020009;
+        public static final int radiobuttonrightselect=0x7f02000a;
+        public static final int radiocenter=0x7f02000b;
+        public static final int radioleft=0x7f02000c;
+        public static final int radioright=0x7f02000d;
+        public static final int tabbg=0x7f02000e;
     }
     public static final class id {
         public static final int action_bar=0x7f050000;
-        public static final int actionbar_nobtn=0x7f050001;
-        public static final int label=0x7f050003;
-        public static final int line1=0x7f050002;
-        public static final int line2=0x7f050004;
-        public static final int line3=0x7f050005;
+        public static final int actionbar_layout=0x7f050005;
+        public static final int glview=0x7f05000a;
+        public static final int label=0x7f050007;
+        public static final int line1=0x7f050006;
+        public static final int line2=0x7f050008;
+        public static final int line3=0x7f050009;
+        public static final int rb_center=0x7f050003;
+        public static final int rb_left=0x7f050002;
+        public static final int rb_right=0x7f050004;
+        public static final int threeradio=0x7f050001;
     }
     public static final class layout {
-        public static final int actionbar_nobtn=0x7f030000;
-        public static final int main=0x7f030001;
-        public static final int tab=0x7f030002;
-        public static final int weight=0x7f030003;
+        public static final int actionbar_layout=0x7f030000;
+        public static final int actionbar_nobtn=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int meal=0x7f030003;
+        public static final int tab=0x7f030004;
+        public static final int weight=0x7f030005;
     }
     public static final class string {
         public static final int app_name=0x7f040001;
