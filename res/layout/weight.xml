@@ -6,7 +6,7 @@
   android:layout_height="fill_parent">
  <FrameLayout 
  android:layout_width="fill_parent"
-  android:layout_height="350dp"
+  android:layout_height="300dp"
   android:layout_alignParentBottom="true"
   >
  <com.freeworks.kukuri.MyGLView
