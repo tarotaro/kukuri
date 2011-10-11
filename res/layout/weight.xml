@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android="http://schemas.android.com/apk/res/android"  
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
- <FrameLayout 
+  
+  
+  <RelativeLayout
+ 	
+  android:id="@+id/graph_frame"   
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  
+  
+ <FrameLayout
+  
  android:layout_width="fill_parent"
   android:layout_height="300dp"
   android:layout_alignParentBottom="true"
   >
- <com.freeworks.kukuri.MyGLView
+  <com.freeworks.kukuri.MyGLView
   android:id="@+id/glview"  
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   />
  
+ 
+
  </FrameLayout>
+ 
+</RelativeLayout>  
 </RelativeLayout>

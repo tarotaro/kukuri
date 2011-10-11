@@ -30,7 +30,8 @@ public final class R {
     public static final class id {
         public static final int action_bar=0x7f050000;
         public static final int actionbar_layout=0x7f050005;
-        public static final int glview=0x7f05000a;
+        public static final int glview=0x7f05000b;
+        public static final int graph_frame=0x7f05000a;
         public static final int label=0x7f050007;
         public static final int line1=0x7f050006;
         public static final int line2=0x7f050008;
