@@ -13,7 +13,58 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   >
+  <RelativeLayout   
+  android:orientation="vertical"
+  android:layout_width="190dp"
+  android:layout_height="40dp"
+  android:layout_centerHorizontal="true"
+  android:layout_marginTop="70dp"
+  >
+  <ImageButton
+  android:id="@+id/nowweightbtn" 
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/whitebutton"
+  />
+  <TextView 
+  android:id="@+id/wtitle"
+  android:text="現在の体重"
+  android:textSize="15dp"
+  android:textColor="#222222"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"  
+  android:gravity="center_vertical"
+  android:layout_marginLeft="10dp"
+  />
+  <TextView 
+  android:id="@+id/nowweighttext"
+  android:text="120.05"
+  android:textSize="18dp"
+  android:textColor="#FFFFFF"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"  
+  android:gravity="center_vertical"
+  android:layout_marginLeft="90dp"
+  />
+  <TextView   
+  android:text="kg"
+  android:textSize="15dp"
+  android:textColor="#222222"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="center_vertical"  
+  android:layout_marginLeft="150dp"
+  />
   
+  <ImageView 
+  android:layout_width="20dp"
+  android:layout_height="20dp"
+  android:background="@drawable/br_next_icon48"
+  android:layout_alignParentRight="true"
+  android:layout_centerVertical="true"
+  android:layout_marginRight="7dp"
+  />
+  </RelativeLayout>
   
  <FrameLayout
   
