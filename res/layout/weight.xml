@@ -12,7 +12,53 @@
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
+  android:background="@drawable/weightback"
   >
+  
+  <RelativeLayout 	
+  android:id="@+id/uiframe"   
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="130dp"
+  android:background="@drawable/weightback"
+  >
+  
+  <LinearLayout 
+  android:orientation="horizontal"
+  android:layout_width="300dp"
+  android:layout_height="40dp"
+  android:layout_centerHorizontal="true"
+  android:layout_marginTop="10dp"
+  android:gravity="center"
+  >
+  <Button 
+  android:orientation="vertical"
+  android:layout_width="30dp"
+  android:layout_height="30dp"
+  android:background="@drawable/round_arrow_left_icon48"
+  android:layout_marginRight="10dp"
+  />
+  <TextView 
+  android:id="@+id/period"
+  android:textSize="20dp"
+  android:textColor="#999999"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="体重期間"
+  android:layout_centerHorizontal="true"
+  android:gravity="center"/>
+  
+  
+  <Button 
+  android:orientation="vertical"
+  android:layout_width="30dp"
+  android:layout_height="30dp"
+  android:background="@drawable/round_arrow_right_icon48"
+  android:layout_marginLeft="10dp"
+  />
+  
+  </LinearLayout>
   <RelativeLayout   
   android:orientation="vertical"
   android:layout_width="190dp"
@@ -65,7 +111,7 @@
   android:layout_marginRight="7dp"
   />
   </RelativeLayout>
-  
+  </RelativeLayout>
  <FrameLayout
   
  android:layout_width="fill_parent"

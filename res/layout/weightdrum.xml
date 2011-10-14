@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+ 
+ <include layout="@layout/actionbar_nobtn" />
+ 
+ <LinearLayout
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="center"
+  >
+  
+  <LinearLayout
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:background="#666666"
+  android:layout_marginBottom="30dp"
+  android:gravity="center"
+  >
+	<TextView 
+  android:id="@+id/date"
+  android:textSize="20dp"
+  android:textColor="#999999"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="日付"  
+  android:gravity="center"
+  />
+  </LinearLayout>
+  
+ <RelativeLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:gravity="center"
+		android:background="@drawable/weightback"
+		android:paddingBottom="20dp"
+		android:paddingTop="20dp">
+		<com.freeworks.kukuri.lib.WeightDrumPicker
+			android:id="@+id/weightpicker" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1" />
+		
+	</RelativeLayout>  
+	
+	<LinearLayout
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:background="#666666"
+  android:layout_marginTop="30dp"
+  android:gravity="center"
+  >
+	<TextView 
+  android:id="@+id/weight"
+  android:textSize="20dp"
+  android:textColor="#999999"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="体重"  
+  android:gravity="center"
+  />
+  
+  <TextView 
+  android:textSize="20dp"
+  android:textColor="#111111"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="kg"
+  android:gravity="center"
+  android:background="#666666"/>
+  
+  </LinearLayout>
+</LinearLayout>
+</LinearLayout>

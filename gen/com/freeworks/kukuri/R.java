@@ -26,27 +26,35 @@ public final class R {
         public static final int radiocenter=0x7f02000c;
         public static final int radioleft=0x7f02000d;
         public static final int radioright=0x7f02000e;
-        public static final int tabbg=0x7f02000f;
-        public static final int whitebutton=0x7f020010;
-        public static final int whitebuttonrect=0x7f020011;
-        public static final int whitebuttonrectpress=0x7f020012;
+        public static final int round_arrow_left_icon48=0x7f02000f;
+        public static final int round_arrow_right_icon48=0x7f020010;
+        public static final int tabbg=0x7f020011;
+        public static final int weightback=0x7f020012;
+        public static final int whitebutton=0x7f020013;
+        public static final int whitebuttonrect=0x7f020014;
+        public static final int whitebuttonrectpress=0x7f020015;
     }
     public static final class id {
         public static final int action_bar=0x7f050000;
         public static final int actionbar_layout=0x7f050005;
-        public static final int glview=0x7f05000e;
+        public static final int date=0x7f050011;
+        public static final int glview=0x7f050010;
         public static final int graph_frame=0x7f05000a;
         public static final int label=0x7f050007;
         public static final int line1=0x7f050006;
         public static final int line2=0x7f050008;
         public static final int line3=0x7f050009;
-        public static final int nowweightbtn=0x7f05000b;
-        public static final int nowweighttext=0x7f05000d;
+        public static final int nowweightbtn=0x7f05000d;
+        public static final int nowweighttext=0x7f05000f;
+        public static final int period=0x7f05000c;
         public static final int rb_center=0x7f050003;
         public static final int rb_left=0x7f050002;
         public static final int rb_right=0x7f050004;
         public static final int threeradio=0x7f050001;
-        public static final int wtitle=0x7f05000c;
+        public static final int uiframe=0x7f05000b;
+        public static final int weight=0x7f050013;
+        public static final int weightpicker=0x7f050012;
+        public static final int wtitle=0x7f05000e;
     }
     public static final class layout {
         public static final int actionbar_layout=0x7f030000;
@@ -55,6 +63,7 @@ public final class R {
         public static final int meal=0x7f030003;
         public static final int tab=0x7f030004;
         public static final int weight=0x7f030005;
+        public static final int weightdrum=0x7f030006;
     }
     public static final class string {
         public static final int app_name=0x7f040001;
