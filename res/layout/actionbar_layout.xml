@@ -9,23 +9,6 @@
 		 android:orientation="horizontal"
 		android:gravity="center" android:background="@drawable/barback">
 		
-		
- 			<Button 
-			android:layout_width="wrap_content"  
- 			android:layout_height="wrap_content"
- 			android:layout_centerVertical="true"
- 			android:layout_alignParentRight="true"
- 			android:layout_marginRight="10dp"
- 			android:text="保存"
-  			android:textSize="13dp"
-  			android:paddingLeft="8dp"
-  			android:paddingRight="8dp"
-  			android:paddingTop="6dp"
-  			android:paddingBottom="6dp"
-  			android:background="@drawable/button"
-  			android:visibility="gone"
- 			/>
- 			
 
 		 <RadioGroup
 			android:id="@+id/threeradio"  
@@ -68,5 +51,28 @@
 		
 	</RelativeLayout>
 	
-	 
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		 android:orientation="horizontal"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="5dp">
+		
+	<Button
+ 			android:id="@+id/actrightbutton"
+			android:layout_width="wrap_content"  
+ 			android:layout_height="wrap_content"
+ 			android:layout_centerVertical="true"
+ 			android:layout_alignParentRight="true"
+ 			android:layout_marginRight="10dp"
+ 			android:text="保存"
+  			android:textSize="13dp"
+  			android:paddingLeft="8dp"
+  			android:paddingRight="8dp"
+  			android:paddingTop="6dp"
+  			android:paddingBottom="6dp"
+  			android:background="@drawable/button"
+  			android:visibility="gone"
+ 			/>
+	 </RelativeLayout>
 </RelativeLayout>

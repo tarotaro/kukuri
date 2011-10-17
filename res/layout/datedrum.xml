@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+ 
+ <LinearLayout  
+        android:orientation="vertical"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"
+        android:background="#000000"  
+        >  
+        <include layout="@layout/actionbar_layout" android:id="@+id/actionbar_layout" /> 
+  
+  
+  <LinearLayout  
+        android:orientation="vertical"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:gravity="center"  
+        >
+        
+  <LinearLayout
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:background="#666666"
+  android:layout_marginBottom="30dp"
+  android:gravity="center"
+  >
+	<TextView 
+  android:id="@+id/date"
+  android:textSize="20dp"
+  android:textColor="#999999"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="日付"  
+  android:gravity="center"
+  />
+  </LinearLayout>
+  
+ <RelativeLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:gravity="center"
+		android:background="@drawable/weightback"
+		android:paddingBottom="20dp"
+		android:paddingTop="20dp">
+		<jp.dip.sys1.android.drumpicker.lib.DateDrumPicker
+			android:id="@+id/datepicker" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1" />
+		
+	</RelativeLayout>  
+	
+	
+</LinearLayout>
+</LinearLayout>
+</LinearLayout>

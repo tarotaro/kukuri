@@ -6,7 +6,13 @@
   android:layout_height="fill_parent"
   >
  
- <include layout="@layout/actionbar_nobtn" />
+ <LinearLayout
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  
+ <include layout="@layout/actionbar_layout" />
  
  <LinearLayout
   android:orientation="vertical"
@@ -16,6 +22,7 @@
   >
   
   <LinearLayout
+  android:id="@+id/datebanner"
   android:orientation="horizontal"
   android:layout_width="fill_parent"
   android:layout_height="wrap_content"
@@ -75,6 +82,8 @@
   android:text="kg"
   android:gravity="center"
   android:background="#666666"/>
+  
+  </LinearLayout>
   
   </LinearLayout>
 </LinearLayout>

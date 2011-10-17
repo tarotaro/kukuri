@@ -23,6 +23,9 @@
 			
 		<activity android:name="com.freeworks.kukuri.WeightDrumActivity"
 			android:screenOrientation="portrait" android:launchMode="standard" />
+		
+		<activity android:name="com.freeworks.kukuri.DateDrumActivity"
+			android:screenOrientation="portrait" android:launchMode="standard" />
 
     </application>
 </manifest>
