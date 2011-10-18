@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class WeightDrumActivity extends Activity{
@@ -50,8 +51,8 @@ public class WeightDrumActivity extends Activity{
 			}
         	
         });
-        ViewGroup vp=(ViewGroup)findViewById(R.id.datebanner);
-        vp.setOnClickListener(new OnClickListener(){
+        ImageButton ib=(ImageButton)findViewById(R.id.datebanner);
+        ib.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
