@@ -46,7 +46,7 @@ public class WeightDrumPicker extends DrumPicker {
 	}
 	
 	public void init() {
-		// onsizeChanged‚Å‚â‚Á‚½‚çH
+		// onsizeChangedã§ã‚„ã£ãŸã‚‰ï¼Ÿ
 		
 		PointOver = new String[150]; 
 		PointUnder = new String[100/5];

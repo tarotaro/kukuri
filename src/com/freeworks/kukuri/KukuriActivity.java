@@ -14,7 +14,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;
-
+ 
 public class KukuriActivity extends TabActivity {
     /** Called when the activity is first created. */
 	private final static String DIARY_TAB = "DiaryTab";
@@ -35,7 +35,7 @@ public class KukuriActivity extends TabActivity {
 
         View tabView1 = inflater.inflate(R.layout.tab, null);
         TextView label1 = (TextView) tabView1.findViewById(R.id.label);
-        label1.setText("êHéñì˙ãL");
+        label1.setText("È£ü‰∫ãÊó•Ë®ò");
         
         intent = new Intent().setClass(this, MealDiaryActivity.class);
         spec = tabs.newTabSpec(DIARY_TAB).setIndicator(tabView1).setContent(intent);
@@ -43,14 +43,14 @@ public class KukuriActivity extends TabActivity {
 
         View tabView2 = inflater.inflate(R.layout.tab, null);
         TextView label2 = (TextView) tabView2.findViewById(R.id.label);
-        label2.setText("ëÃèd");
+        label2.setText("‰ΩìÈáç");
         intent = new Intent().setClass(this, WeightActivity.class);
         spec = tabs.newTabSpec(WEIGHT_TAB).setIndicator(tabView2).setContent(intent);
         tabs.addTab(spec);
 
         View tabView3 = inflater.inflate(R.layout.tab, null);        
         TextView label3 = (TextView) tabView3.findViewById(R.id.label);
-        label3.setText("â^ìÆ");
+        label3.setText("ÈÅãÂãï");
         intent = new Intent().setClass(this, MealDiaryActivity.class);
         spec = tabs.newTabSpec(EXEC_TAB).setIndicator(tabView3).setContent(intent);
         tabs.addTab(spec);
@@ -58,7 +58,7 @@ public class KukuriActivity extends TabActivity {
         
         View tabView4 = inflater.inflate(R.layout.tab, null);        
         TextView label4 = (TextView) tabView4.findViewById(R.id.label);
-        label4.setText("ëSëÃèÓïÒ");
+        label4.setText("ÂÖ®‰ΩìÊÉÖÂ†±");
         intent = new Intent().setClass(this, MealDiaryActivity.class);
         spec = tabs.newTabSpec(ALLINFO_TAB).setIndicator(tabView4).setContent(intent);
         tabs.addTab(spec);
@@ -66,7 +66,7 @@ public class KukuriActivity extends TabActivity {
         View tabView5 = inflater.inflate(R.layout.tab, null);
         
         TextView label5 = (TextView) tabView5.findViewById(R.id.label);
-        label5.setText("ê›íË");
+        label5.setText("Ë®≠ÂÆö");
         intent = new Intent().setClass(this, MealDiaryActivity.class);
         spec = tabs.newTabSpec(SETTING_TAB).setIndicator(tabView5).setContent(intent);
         tabs.addTab(spec);

@@ -41,7 +41,7 @@ public class TimeDrumPicker extends DrumPicker {
 	}
 	
 	public void init() {
-		// onsizeChangedÇ≈Ç‚Ç¡ÇΩÇÁÅH
+		// onsizeChanged„Åß„ÇÑ„Å£„Åü„ÇâÔºü
 		addRow(HOUR, 80);
 		addRow(TIME, 80);
 		

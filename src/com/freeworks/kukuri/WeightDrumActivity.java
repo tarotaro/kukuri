@@ -67,13 +67,13 @@ public class WeightDrumActivity extends Activity{
         });
         
         TextView datetext=(TextView)findViewById(R.id.date);
-		datetext.setText(String.format("%d”N%dŒ%d“ú",mYear,mMonth,mDay));
+		datetext.setText(String.format("%då¹´%dæœˆ%dæ—¥",mYear,mMonth,mDay));
 		
 		picker.setPointOver((int)mWeight);        
         picker.setPointUnder(mWeight-(int)mWeight); 
         
         final Button leftbtn=(Button)findViewById(R.id.actrightbutton);
-        leftbtn.setText("•Û‘¶");
+        leftbtn.setText("ä¿å­˜");
         leftbtn.setVisibility(View.VISIBLE);
         leftbtn.setOnClickListener(new OnClickListener(){
 			@Override
@@ -99,7 +99,7 @@ public class WeightDrumActivity extends Activity{
     			mMonth=data.getIntExtra("Month", 6);
     			mDay=data.getIntExtra("Day", 7);
     			TextView text=(TextView)findViewById(R.id.date);
-    			text.setText(String.format("%d”N%dŒ%d“ú",mYear,mMonth,mDay));
+    			text.setText(String.format("%då¹´%dæœˆ%dæ—¥",mYear,mMonth,mDay));
     		}
     	}
     }

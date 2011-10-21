@@ -112,7 +112,7 @@ public class DrumPickerScrollView extends ScrollView {
 		super.onDraw(canvas);
 	}
 
-	//�^�C�~���O�m�F�ׂ̈Ƀ��O�o�����Ă��B����Ȃ����Ǎ�����g����������Ȃ��̂ŃR�����g�A�E�g�Ŏc��
+	//タイミング確認の為にログ出ししてた。いらないけど今後も使うかもしれないのでコメントアウトで残す
 //	@Override
 //	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 //		Log.d(TAG, "onMeasure");

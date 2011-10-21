@@ -8,26 +8,26 @@ import android.graphics.Paint.FontMetrics;
 import com.freeworks.kukuri.util.SpriteTexture;  
 import javax.microedition.khronos.opengles.GL10; 
 /** 
- * ƒtƒHƒ“ƒgƒNƒ‰ƒX 
+ * ãƒ•ã‚©ãƒ³ãƒˆã‚¯ãƒ©ã‚¹ 
  */  
 public class Font {  
- final static Paint paint = new Paint(); // •`‰æî•ñ  
- static FontMetrics font = paint.getFontMetrics(); // ƒtƒHƒ“ƒgƒƒgƒŠƒNƒX  
+ final static Paint paint = new Paint(); // æç”»æƒ…å ±  
+ static FontMetrics font = paint.getFontMetrics(); // ãƒ•ã‚©ãƒ³ãƒˆãƒ¡ãƒˆãƒªã‚¯ã‚¹  
   
  /** 
-  * ƒRƒ“ƒXƒgƒ‰ƒNƒ^ 
-  * ƒCƒ“ƒXƒ^ƒ“ƒX‰»‹Ö~ 
+  * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ 
+  * ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ç¦æ­¢ 
   */  
  Font() {}  
   
  /** 
-  * •`‰æ 
+  * æç”» 
   * @param text 
   * @param x 
   * @param y 
   */  
  public static void draw(String text, int x, int y,int screen_height,GL10 gl) {  
-  // •¶šƒTƒCƒY‚Ìæ“¾  
+  // æ–‡å­—ã‚µã‚¤ã‚ºã®å–å¾—  
     
   int[] size = { getWidth(text), getHeight() };  
     
@@ -39,29 +39,29 @@ public class Font {
 	  		}  
   }  
  
-  //ƒLƒƒƒ“ƒoƒX‚Æƒrƒbƒgƒ}ƒbƒv‚ğ‹¤—L‰»  
+  //ã‚­ãƒ£ãƒ³ãƒã‚¹ã¨ãƒ“ãƒƒãƒˆãƒãƒƒãƒ—ã‚’å…±æœ‰åŒ–  
   Bitmap image = Bitmap.createBitmap(power_size[0], power_size[1], Config.ARGB_8888);  
   Canvas canvas = new Canvas(image);
     
   
-  // •¶š—ñ‚ğƒLƒƒƒ“ƒoƒX‚É•`‰æ  
+  // æ–‡å­—åˆ—ã‚’ã‚­ãƒ£ãƒ³ãƒã‚¹ã«æç”»  
   paint.setAntiAlias(true);  
   canvas.drawText(text, 0, Math.abs(font.ascent), paint);  
   
-  // ƒLƒƒƒ“ƒoƒXƒf[ƒ^‚©‚çƒXƒvƒ‰ƒCƒg‚ğì¬  
+  // ã‚­ãƒ£ãƒ³ãƒã‚¹ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆã‚’ä½œæˆ  
   SpriteTexture sprite = SpriteTexture.create(image,gl);  
   
-  // ƒXƒvƒ‰ƒCƒg‚Ì•`‰æ  
+  // ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆã®æç”»  
   sprite.draw(x, y,screen_height);
   
-  // ŠJ•ú  
+  // é–‹æ”¾  
   sprite.release();  
   sprite = null;  
   canvas = null;  
  }  
   
  /** 
-  * •¶š—ñF‚Ìİ’è 
+  * æ–‡å­—åˆ—è‰²ã®è¨­å®š 
   * @param color 
   */  
  public static void setColor(int color) {  
@@ -69,26 +69,26 @@ public class Font {
  }  
   
  /** 
-  * •¶šƒTƒCƒY‚Ìİ’è 
+  * æ–‡å­—ã‚µã‚¤ã‚ºã®è¨­å®š 
   * @param size 
   */  
  public static void setSize(int size) {  
   paint.setTextSize(size);  
-  font = paint.getFontMetrics(); // •¶šƒTƒCƒYXVŒã‚ÌƒƒgƒŠƒNƒX‚ğæ“¾  
+  font = paint.getFontMetrics(); // æ–‡å­—ã‚µã‚¤ã‚ºæ›´æ–°å¾Œã®ãƒ¡ãƒˆãƒªã‚¯ã‚¹ã‚’å–å¾—  
  }  
   
  /** 
-  * •¶š—ñ‚Ì•‚Ìæ“¾ 
+  * æ–‡å­—åˆ—ã®å¹…ã®å–å¾— 
   * @param text 
-  * @return •¶š—ñ‚Ì• 
+  * @return æ–‡å­—åˆ—ã®å¹… 
   */  
  public static int getWidth(String text) {  
   return (int) (paint.measureText(text) + 0.5f);  
  }  
   
  /** 
-  * •¶š—ñ‚Ì‚‚³‚ğæ“¾ 
-  * @return •¶š—ñ‚Ì‚ 
+  * æ–‡å­—åˆ—ã®é«˜ã•ã‚’å–å¾— 
+  * @return æ–‡å­—åˆ—ã®é«˜ 
   */  
  public static int getHeight() {  
   return (int) (Math.abs(font.top) + Math.abs(font.bottom) + 0.5f);  

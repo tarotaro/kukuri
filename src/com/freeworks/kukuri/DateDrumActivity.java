@@ -37,7 +37,7 @@ public class DateDrumActivity extends Activity{
         }
         
         final Button leftbtn=(Button)findViewById(R.id.actrightbutton);
-        leftbtn.setText("Š®—¹");
+        leftbtn.setText("å®Œäº†");
         leftbtn.setVisibility(View.VISIBLE);
         leftbtn.setOnClickListener(new OnClickListener(){
 			@Override
@@ -78,7 +78,7 @@ public class DateDrumActivity extends Activity{
 					leftbtn.setVisibility(View.GONE);
 				
 				
-				text.setText(String.format("%d”N%dŒŽ%d“ú",mYear,mMonth,mDay));
+				text.setText(String.format("%då¹´%dæœˆ%dæ—¥",mYear,mMonth,mDay));
 			}
 		});
         

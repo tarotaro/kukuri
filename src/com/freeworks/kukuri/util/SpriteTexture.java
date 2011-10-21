@@ -18,22 +18,22 @@ import android.graphics.RectF;
 import android.opengl.GLUtils;  
   
 /** 
- * ƒXƒvƒ‰ƒCƒgƒNƒ‰ƒX 
+ * ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆã‚¯ãƒ©ã‚¹ 
  */  
 public class SpriteTexture {  
- public final static int LOAD_ERROR = -1; // “Ç‚İ‚İƒGƒ‰[ƒƒbƒZ[ƒW  
+ public final static int LOAD_ERROR = -1; // èª­ã¿è¾¼ã¿ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸  
    
- final static float[] TEXCOORDS = { 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f }; // UVÀ•W  
+ final static float[] TEXCOORDS = { 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f }; // UVåº§æ¨™  
   
- final static FloatBuffer TEXCOORD_BUFFER = getFloatBuffer(TEXCOORDS);   // UVƒoƒbƒtƒ@  
+ final static FloatBuffer TEXCOORD_BUFFER = getFloatBuffer(TEXCOORDS);   // UVãƒãƒƒãƒ•ã‚¡  
  static GL10 gl;
- public int index; // ƒCƒ[ƒWƒoƒCƒ“ƒhID  
- Bitmap image;  // ƒrƒbƒgƒ}ƒbƒvƒCƒ[ƒW  
- int width, height; // ‰æ‘œƒTƒCƒY  
+ public int index; // ã‚¤ãƒ¡ãƒ¼ã‚¸ãƒã‚¤ãƒ³ãƒ‰ID  
+ Bitmap image;  // ãƒ“ãƒƒãƒˆãƒãƒƒãƒ—ã‚¤ãƒ¡ãƒ¼ã‚¸  
+ int width, height; // ç”»åƒã‚µã‚¤ã‚º  
   Context context;
    
- public float scale;  // Šg‘å’l  
- public float angle;  // ‰ñ“]’l  
+ public float scale;  // æ‹¡å¤§å€¤  
+ public float angle;  // å›è»¢å€¤  
   
  
  public SpriteTexture(GL10 _gl) {  
@@ -45,7 +45,7 @@ public class SpriteTexture {
  }  
    
  /** 
-  * ŠJ•úˆ— 
+  * é–‹æ”¾å‡¦ç† 
   */  
  public void release() {  
   int[] textures = {index};  
@@ -56,22 +56,22 @@ public class SpriteTexture {
    
    
  /** 
-  * ƒXƒvƒ‰ƒCƒg‚Ìì¬ 
+  * ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆã®ä½œæˆ 
   * @param bitmap 
-  * @return ì¬‚³‚ê‚½ƒXƒvƒ‰ƒCƒgƒf[ƒ^ 
+  * @return ä½œæˆã•ã‚ŒãŸã‚¹ãƒ—ãƒ©ã‚¤ãƒˆãƒ‡ãƒ¼ã‚¿ 
   */  
  public static SpriteTexture create(Bitmap bitmap,GL10 _gl) {  
   SpriteTexture sprite = new SpriteTexture(_gl);  
     
-  // ƒeƒNƒXƒ`ƒƒID‚Ìİ’è  
+  // ãƒ†ã‚¯ã‚¹ãƒãƒ£IDã®è¨­å®š  
   sprite.index = setTextureID();  
     
-  // ƒrƒbƒgƒ}ƒbƒvƒCƒ[ƒW‚Ìİ’è  
+  // ãƒ“ãƒƒãƒˆãƒãƒƒãƒ—ã‚¤ãƒ¡ãƒ¼ã‚¸ã®è¨­å®š  
   GLUtils.texImage2D(GL10.GL_TEXTURE_2D, 0, bitmap, 0);  
   sprite.image = bitmap;  
   sprite.image.recycle();  
     
-  // ‰æ‘œƒTƒCƒY‚Ìæ“¾  
+  // ç”»åƒã‚µã‚¤ã‚ºã®å–å¾—  
   sprite.width = bitmap.getWidth();  
   sprite.height = bitmap.getHeight();  
           
@@ -79,52 +79,52 @@ public class SpriteTexture {
  }  
    
  /** 
-  * ƒeƒNƒXƒ`ƒƒID‚Ìİ’è 
-  * @return ƒeƒNƒXƒ`ƒƒID 
+  * ãƒ†ã‚¯ã‚¹ãƒãƒ£IDã®è¨­å®š 
+  * @return ãƒ†ã‚¯ã‚¹ãƒãƒ£ID 
   */  
  static int setTextureID() {  
   int[] ids = { LOAD_ERROR };  
     
-  // g—pƒeƒNƒXƒ`ƒƒ”‚Ìİ’è  
+  // ä½¿ç”¨ãƒ†ã‚¯ã‚¹ãƒãƒ£æ•°ã®è¨­å®š  
   gl.glGenTextures(1, ids, 0);  
     
-  // ID‚ğƒoƒCƒ“ƒh  
+  // IDã‚’ãƒã‚¤ãƒ³ãƒ‰  
   gl.glBindTexture(GL10.GL_TEXTURE_2D, ids[0]);  
     
-  // ƒpƒ‰ƒ[ƒ^İ’è  
+  // ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿è¨­å®š  
   gl.glTexParameterx( GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_S, GL10.GL_REPEAT );  
   gl.glTexParameterx( GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_T, GL10.GL_REPEAT );  
   gl.glTexParameterx( GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MAG_FILTER, GL10.GL_LINEAR );  
   gl.glTexParameterx( GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MIN_FILTER, GL10.GL_LINEAR );  
     
-  // ƒ|ƒŠƒSƒ“F‚ÆƒeƒNƒXƒ`ƒƒF‚Ì‡¬•û–@  
+  // ãƒãƒªã‚´ãƒ³è‰²ã¨ãƒ†ã‚¯ã‚¹ãƒãƒ£è‰²ã®åˆæˆæ–¹æ³•  
   gl.glTexEnvf(GL10.GL_TEXTURE_ENV, GL10.GL_TEXTURE_ENV_MODE, GL10.GL_MODULATE);  
     
   return ids[0];  
  }  
    
  /** 
-  * •`‰æ 
-  * @param x XÀ•W 
-  * @param y YÀ•W 
+  * æç”» 
+  * @param x Xåº§æ¨™ 
+  * @param y Yåº§æ¨™ 
   */  
  public void draw(int x, int y,int screen_height) {          
-  // ƒeƒNƒXƒ`ƒƒ‚ğƒoƒCƒ“ƒh  
+  // ãƒ†ã‚¯ã‚¹ãƒãƒ£ã‚’ãƒã‚¤ãƒ³ãƒ‰  
   gl.glBindTexture(GL10.GL_TEXTURE_2D, index);  
   gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
   gl.glEnableClientState(GL10.GL_TEXTURE_COORD_ARRAY);
   
-  // UVÀ•W  
+  // UVåº§æ¨™  
   setTexture();  
     
-  // ’¸“_ƒJƒ‰[  
+  // é ‚ç‚¹ã‚«ãƒ©ãƒ¼  
   gl.glColor4f(1.0f,1.0f,1.0f,1.0f);  
     
-  // ’¸“_ƒoƒbƒtƒ@  
+  // é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡  
   float[] vertices = getVertices(x, screen_height - y, getWidth(), getHeight());  
   gl.glVertexPointer(3, GL10.GL_FLOAT, 0, getFloatBuffer(vertices));  
     
-  // •`‰æ    
+  // æç”»    
   gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, 4);
   gl.glDisableClientState(GL10.GL_VERTEX_ARRAY);
   gl.glDisableClientState(GL10.GL_TEXTURE_COORD_ARRAY);
@@ -141,7 +141,7 @@ public static FloatBuffer getFloatBuffer(float vertex[])
 	  return vertexBuffer;
 }
  /** 
-  * UVÀ•W‚Ìİ’è 
+  * UVåº§æ¨™ã®è¨­å®š 
   */  
  public void setTexture() {  
   gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, TEXCOORD_BUFFER);  
@@ -150,19 +150,19 @@ public static FloatBuffer getFloatBuffer(float vertex[])
  
    
  /** 
-  * À•W•ÏŠ·’¸“_ƒoƒbƒtƒ@‚Ìæ“¾i‰æ‘œ•w’èj 
-  * @param x XÀ•W 
-  * @param y YÀ•W 
-  * @param width ‰¡• 
-  * @param height c• 
-  * @return ’¸“_ƒoƒbƒtƒ@ 
+  * åº§æ¨™å¤‰æ›é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡ã®å–å¾—ï¼ˆç”»åƒå¹…æŒ‡å®šï¼‰ 
+  * @param x Xåº§æ¨™ 
+  * @param y Yåº§æ¨™ 
+  * @param width æ¨ªå¹… 
+  * @param height ç¸¦å¹… 
+  * @return é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡ 
   */  
  final float[] getVertices(int x, int y, int width, int height) {  
-  // À•WŒn•ÏŠ·—p  
+  // åº§æ¨™ç³»å¤‰æ›ç”¨  
   int px = width >> 1;  
   int py = height >> 1;  
   
-  // ’¸“_ƒoƒbƒtƒ@  
+  // é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡  
   float[] vertices = {  
    x, y, 0,  
    x + width, y, 0,  
@@ -174,17 +174,17 @@ public static FloatBuffer getFloatBuffer(float vertex[])
    vertices[i] -= x + px;  
    vertices[i + 1] -= y + py;  
   
-   // Šg‘å  
+   // æ‹¡å¤§  
    vertices[i] *= scale;  
    vertices[i + 1] *= scale;  
   
-   // ‰ñ“]  
+   // å›è»¢  
    float tx = vertices[i];  
    float ty = vertices[i + 1];  
    vertices[i] = (float) (Math.cos(Math.PI*angle/180.0f) * tx - Math.sin(Math.PI*angle/180.0f) * ty);  
    vertices[i + 1] = (float) (Math.sin(Math.PI*angle/180.0f) * tx + Math.cos(Math.PI*angle/180.0f) * ty);  
   
-   // ˆÚ“®  
+   // ç§»å‹•  
    vertices[i] += x + px;  
    vertices[i + 1] += y - py;  
   }  */
@@ -193,7 +193,7 @@ public static FloatBuffer getFloatBuffer(float vertex[])
  }  
    
  /** 
-  * ‰¡•æ“¾ 
+  * æ¨ªå¹…å–å¾— 
   * @return 
   */  
  public int getWidth() {  
@@ -201,7 +201,7 @@ public static FloatBuffer getFloatBuffer(float vertex[])
  }  
    
  /** 
-  * c•æ“¾ 
+  * ç¸¦å¹…å–å¾— 
   * @return 
   */  
  public int getHeight() {  
@@ -209,7 +209,7 @@ public static FloatBuffer getFloatBuffer(float vertex[])
  }  
    
  /** 
-  * ”ÍˆÍæ“¾ 
+  * ç¯„å›²å–å¾— 
   * @return 
   */  
  public Rect getRect() {  

@@ -79,7 +79,7 @@ public class DateDrumPicker extends DrumPicker {
 		mYear=oldy;
 		mMonth=oldm;
 		mDay=oldd;
-		// ƒŠƒXƒi[
+		// ãƒªã‚¹ãƒŠãƒ¼
 		setOnPostionChangedListener(new OnPositionChangedListener() {
 			@Override
 			public void onPositionChanged(int itemPos, int pos) {
@@ -107,7 +107,7 @@ public class DateDrumPicker extends DrumPicker {
 	}
 
 	private void resizeDay(int year, int month) {
-		// “ú
+		// æ—¥
 		int oldy = mCalendar.get(Calendar.YEAR);
 		int oldm = mCalendar.get(Calendar.MONTH);
 		int oldd = mCalendar.get(Calendar.DAY_OF_MONTH);

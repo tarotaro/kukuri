@@ -67,9 +67,9 @@ public class DrumPicker extends FrameLayout{
 	}
 	
 	/**
-	 * —ñ‚ğ’Ç‰Á‚·‚é
-	 * @param params ‘I‘ğ€–Ú
-	 * @param width —ñ‚Ì•
+	 * åˆ—ã‚’è¿½åŠ ã™ã‚‹
+	 * @param params é¸æŠé …ç›®
+	 * @param width åˆ—ã®å¹…
 	 */
 	public void addRow(List<String> params, int width){
 		addRow(params.toArray(new String[]{}), width);
@@ -78,12 +78,12 @@ public class DrumPicker extends FrameLayout{
 		addRow(params, width, params.length);
 	}
 	/**
-	 * —ñ‚ğ’Ç‰Á‚·‚éB
+	 * åˆ—ã‚’è¿½åŠ ã™ã‚‹ã€‚
 	 * @param params
 	 * @param width
 	 */
 	public void addRow(String[] params, int width, int size) {
-		//TODO ƒTƒCƒYü‚è‚ªŒˆ‚ß‘Å‚¿‚È‚Ì‚Å‚È‚ñ‚Æ‚©‚·‚é
+		//TODO ã‚µã‚¤ã‚ºå‘¨ã‚ŠãŒæ±ºã‚æ‰“ã¡ãªã®ã§ãªã‚“ã¨ã‹ã™ã‚‹
 		final int count = mCount;
 		mCount++;
 		LinearLayout layout = createCover();
@@ -128,7 +128,7 @@ public class DrumPicker extends FrameLayout{
 	}
 	
 	private void addTextView(String text, ViewGroup layout, int id){
-		//TODO ƒTƒCƒY‚Æ‚©
+		//TODO ã‚µã‚¤ã‚ºã¨ã‹
 		TextView textView = new TextView(getContext());
 		textView = new TextView(getContext());
 		textView.setTextColor(Color.BLACK);
@@ -141,7 +141,7 @@ public class DrumPicker extends FrameLayout{
 	}
 	
 	/**
-	 * •\–Ê‚Ì‰e‚Æ‚©
+	 * è¡¨é¢ã®å½±ã¨ã‹
 	 * @return
 	 */
 	private LinearLayout createCover() {
@@ -157,14 +157,14 @@ public class DrumPicker extends FrameLayout{
 								Config.ARGB_8888);
 						Canvas c = new Canvas(shade);
 											
-						//ã‰º‚Ì‰e
+						//ä¸Šä¸‹ã®å½±
 						Shader s = new LinearGradient(0, 0, 0, (60*scale), Color.BLACK, Color.TRANSPARENT, Shader.TileMode.CLAMP);
 						paint.setShader(s);
 						c.drawRect(0,0,shade.getWidth(), shade.getHeight(), paint);
 						c.rotate(180, shade.getWidth()/2, shade.getHeight()/2);
 						c.drawRect(0,0,shade.getWidth(), shade.getHeight(), paint);
 						
-						//˜g
+						//æ 
 						Paint stroke = new Paint();
 						stroke.setColor(Color.DKGRAY);
 						stroke.setStrokeWidth(4);
@@ -183,7 +183,7 @@ public class DrumPicker extends FrameLayout{
 	}
 	Bitmap mLensBitmap = null;
 	private void drawLens(View view, Canvas canvas){
-		//ƒŒƒ“ƒY
+		//ãƒ¬ãƒ³ã‚º
 		//Bitmap lens = (Bitmap)view.getTag();
 		if(mLensBitmap == null && view.getWidth() > 0 && view.getHeight() > 0){
 			
@@ -210,9 +210,9 @@ public class DrumPicker extends FrameLayout{
 		}
 	}
 	/**
-	 * s‚ÌˆÊ’u‚ğƒZƒbƒg‚·‚é
-	 * @param itemPos —ñ
-	 * @param pos s
+	 * è¡Œã®ä½ç½®ã‚’ã‚»ãƒƒãƒˆã™ã‚‹
+	 * @param itemPos åˆ—
+	 * @param pos è¡Œ
 	 */
 	public void setPosition(int itemPos, int pos){
 		if(itemPos >= 0 && mScrollViews.size() > itemPos){
@@ -261,7 +261,7 @@ public class DrumPicker extends FrameLayout{
 	}
 	
 	/**
-	 * ƒAƒCƒeƒ€‚Ì”‚ğ•Ï‚¦‚é‚Ég‚¤ƒŠƒXƒi[
+	 * ã‚¢ã‚¤ãƒ†ãƒ ã®æ•°ã‚’å¤‰ãˆã‚‹æ™‚ã«ä½¿ã†ãƒªã‚¹ãƒŠãƒ¼
 	 * @author yagi
 	 *
 	 */

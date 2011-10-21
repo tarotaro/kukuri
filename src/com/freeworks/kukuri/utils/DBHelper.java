@@ -151,7 +151,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return weighthash;
     }
 
-    public void deleteData(String now_date) {//‘½•ªŽg‚í‚È‚¢
+    public void deleteData(String now_date) {
 
         SQLiteDatabase db = getWritableDatabase();
 

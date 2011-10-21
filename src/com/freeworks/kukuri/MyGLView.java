@@ -138,14 +138,14 @@ public class MyGLView extends GLSurfaceView implements GLSurfaceView.Renderer {
 			gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT, GL10.GL_FASTEST);
 			gl.glEnable(GL10.GL_ALPHA_TEST);
 			gl.glEnable(GL10.GL_BLEND);
-			gl.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA); // ƒfƒtƒHƒ‹ƒg‚ÍƒAƒ‹ƒtƒ@‡¬
+			gl.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA); // ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½ÍƒAï¿½ï¿½ï¿½tï¿½@ï¿½ï¿½ï¿½ï¿½
 			gl.glActiveTexture(GL10.GL_TEXTURE0);
 			
-			// ƒ‚ƒfƒ‹s—ñ‚ğ–³Œø‰»
+			// ï¿½ï¿½ï¿½fï¿½ï¿½ï¿½sï¿½ï¿½ğ–³Œï¿½
 			gl.glMatrixMode(GL10.GL_PROJECTION);
 			gl.glPushMatrix();
 			gl.glLoadIdentity();
-			// screen_width‹y‚Ñscreen_height‚ÍƒfƒoƒCƒX‚Ì‰æ–ÊƒTƒCƒY
+			// screen_widthï¿½yï¿½ï¿½screen_heightï¿½Íƒfï¿½oï¿½Cï¿½Xï¿½Ì‰ï¿½ÊƒTï¿½Cï¿½Y
 			GLU.gluOrtho2D(gl, 0, m_Width, 0, m_Height);
 
 			gl.glMatrixMode(GL10.GL_MODELVIEW);
@@ -282,11 +282,11 @@ public class MyGLView extends GLSurfaceView implements GLSurfaceView.Renderer {
 		m_Width = width;
 		m_Height = height;
 
-		gl.glViewport(0, 0, width, height); // ƒrƒ…[ƒ|[ƒg‚ÌÄƒZƒbƒg
+		gl.glViewport(0, 0, width, height);
 		gl.glShadeModel(GL10.GL_SMOOTH);
 
-		gl.glMatrixMode(GL10.GL_PROJECTION); // @Ë‰es—ñiƒvƒƒWƒFƒNƒVƒ‡ƒ“ƒ‚[ƒhj
-		gl.glLoadIdentity(); // @’PˆÊs—ñ‚ÌƒZƒbƒg
+		gl.glMatrixMode(GL10.GL_PROJECTION);
+		gl.glLoadIdentity();
 		GLU.gluPerspective(gl, 60.0f, (float) width / (float) height, 0.1f,
 				1000.0f);
 		gl.glMatrixMode(GL10.GL_MODELVIEW);
